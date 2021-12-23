@@ -5,7 +5,7 @@ import externalUrls from "./externalUrls";
 import { ReactComponent as StakeIcon } from "../../assets/icons/stake.svg";
 import { ReactComponent as BondIcon } from "../../assets/icons/bond.svg";
 import { ReactComponent as DashboardIcon } from "../../assets/icons/dashboard.svg";
-import GlaIcon from "../../assets/icons/gla-nav-header.png";
+import { ReactComponent as HectorIcon } from "../../assets/icons/gla-nav-header.svg";
 import { trim, shorten } from "../../helpers";
 import { useAddress, useWeb3Context } from "src/hooks/web3Context";
 import useBonds from "../../hooks/Bonds";
@@ -39,8 +39,13 @@ function NavContent() {
         <div className="dapp-menu-top">
           <Box className="branding-header">
             <Link href="https://app.galacticdao.com" target="_blank">
-              <img alt="" src={GlaIcon} width={120}/>
-              <div className="wallet-link f-32">Galactic DAO</div>
+              <SvgIcon
+                color="primary"
+                component={HectorIcon}
+                viewBox="0 0 160 160"
+                style={{ minWdth: "151px", minHeight: "98px", width: "151px" }}
+              />
+              {/* <div className="wallet-link f-32">MART DAO</div> */}
             </Link>
             {address && (
               <div className="wallet-link">
@@ -94,7 +99,7 @@ function NavContent() {
               >
                 <Typography variant="h6">
                   <SvgIcon color="primary" component={BondIcon} />
-                  Auto-Compounding Bond
+                  Bonds
                 </Typography>
               </Link>
 

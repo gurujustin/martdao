@@ -28,21 +28,26 @@ function TreasuryDashboard() {
   const smallerScreen = useMediaQuery("(max-width: 650px)");
   const verySmallScreen = useMediaQuery("(max-width: 379px)");
 
-  const marketPrice = useSelector(state => {
-    return state.app.marketPrice;
-  });
-  const circSupply = useSelector(state => {
-    return state.app.circSupply;
-  });
-  const totalSupply = useSelector(state => {
-    return state.app.totalSupply;
-  });
-  const marketCap = useSelector(state => {
-    return state.app.marketCap;
-  });
-  const currentIndex = useSelector(state => {
-    return state.app.currentIndex;
-  });
+  // const marketPrice = useSelector(state => {
+  //   return state.app.marketPrice;
+  // });
+  const marketPrice = 10;
+  // const circSupply = useSelector(state => {
+  //   return state.app.circSupply;
+  // });
+  const circSupply = 100;
+  // const totalSupply = useSelector(state => {
+  //   return state.app.totalSupply;
+  // });
+  const totalSupply = 1000;
+  // const marketCap = useSelector(state => {
+  //   return state.app.marketCap;
+  // });
+  const marketCap = 1000;
+  // const currentIndex = useSelector(state => {
+  //   return state.app.currentIndex;
+  // });
+  const currentIndex = 1;
   const rebase = useSelector(state => {
     return state.app.stakingRebase;
   });
@@ -58,9 +63,10 @@ function TreasuryDashboard() {
     }
   });
 
-  const wsGlaPrice = useSelector(state => {
-    return state.app.marketPrice * state.app.currentIndex;
-  });
+  // const wsGlaPrice = useSelector(state => {
+  //   return state.app.marketPrice * state.app.currentIndex;
+  // });
+  const wsGlaPrice = 10;
 
   return (
     <div id="treasury-dashboard-view" className={`${smallerScreen && "smaller"} ${verySmallScreen && "very-small"}`}>

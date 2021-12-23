@@ -162,7 +162,7 @@ function Stake() {
             <Grid container direction="column" spacing={2}>
               <Grid item>
                 <div className="card-header">
-                  <Typography variant="h5">Stake GLA</Typography>
+                  <Typography variant="h5">Stake</Typography>
                   <RebaseTimer />
                 </div>
               </Grid>
@@ -302,7 +302,7 @@ function Stake() {
                                 onChangeStake("stake", false);
                               }}
                             >
-                              {txnButtonText(pendingTransactions, "staking", "Stake GLA")}
+                              {txnButtonText(pendingTransactions, "staking", "Stake")}
                             </Button>
                           ) : (
                             <Button

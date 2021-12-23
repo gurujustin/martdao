@@ -33,8 +33,27 @@ export const usdt = new StableBond({
   // fourAddress: "0xe8fd4630800bA4335801D1b104B07328Ae415605",
   networkAddrs: {
     [NetworkID.Mainnet]: {
-      bondAddress: "0x400F304D820403A30eF17D58c7b5EEE6e8F03935",
-      reserveAddress: "0x55d398326f99059ff775485246999027b3197955",
+      bondAddress: "0xF09A57568Dc4BBd3F59833CD53052D847bb996da",
+      reserveAddress: "0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E",
+    },
+    [NetworkID.Testnet]: {
+      bondAddress: "",
+      reserveAddress: "",
+    },
+  },
+});
+
+export const dai = new StableBond({
+  name: "dai",
+  displayName: "DAI",
+  bondToken: "DAI",
+  bondIconSvg: DaiImg,
+  bondContractABI: DaiBondContract,
+  // fourAddress: "0xe8fd4630800bA4335801D1b104B07328Ae415605",
+  networkAddrs: {
+    [NetworkID.Mainnet]: {
+      bondAddress: "0xF09A57568Dc4BBd3F59833CD53052D847bb996da",
+      reserveAddress: "0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E",
     },
     [NetworkID.Testnet]: {
       bondAddress: "",
@@ -152,7 +171,7 @@ export const gla_busd = new LPBond({
 // Is it a stableCoin bond? use `new StableBond`
 // Is it an LP Bond? use `new LPBond`
 // Add new bonds to this array!!
-export const allBonds = [ gla_usdc,  busd, usdc,  usdt, gla_usdt, gla_busd];
+export const allBonds = [ dai];
 export const allBondsMap = allBonds.reduce((prevVal, bond) => {
   return { ...prevVal, [bond.name]: bond };
 }, {});

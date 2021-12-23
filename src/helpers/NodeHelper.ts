@@ -30,7 +30,7 @@ export class NodeHelper {
    * returns Array of APIURIs where NOT on invalidNodes list
    */
   static getNodesUris = () => {
-    let allURIs = ["https://speedy-nodes-nyc.moralis.io/b7f7f8370bc56f6d73cdcfe1/bsc/mainnet"];
+    let allURIs = ["https://rpc.ftm.tools"];
     return allURIs;
   };
 

@@ -92,7 +92,9 @@ export const loadAppDetails = createAsyncThunk(
     const fiveDayRate = Math.pow(1 + stakingRebase, 5 * 3) - 1;
     const stakingAPY = Math.pow(1 + stakingRebase, 365 * 3) - 1;
     // Current index
-    const currentIndex = await stakingContract.index();
+    // const currentIndex = await stakingContract.index();
+    const currentIndex = 1000000000;
+
     const endBlock = epoch.endBlock;
 
     return {

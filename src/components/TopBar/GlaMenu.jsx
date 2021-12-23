@@ -3,8 +3,8 @@ import { addresses, TOKEN_DECIMALS } from "../../constants";
 import { Link, SvgIcon, Popper, Button, Paper, Typography, Divider, Box, Fade, Slide } from "@material-ui/core";
 import { ReactComponent as InfoIcon } from "../../assets/icons/info-fill.svg";
 import { ReactComponent as ArrowUpIcon } from "../../assets/icons/arrow-up.svg";
-import { ReactComponent as sglaTokenImg } from "../../assets/tokens/SGLA.svg";
-import { ReactComponent as glaTokenImg } from "../../assets/tokens/GLA.svg";
+import { ReactComponent as sglaTokenImg } from "../../assets/tokens/sMART.svg";
+import { ReactComponent as glaTokenImg } from "../../assets/tokens/MART.svg";
 
 import "./glamenu.scss";
 import { usdt } from "src/helpers/AllBonds";
@@ -76,7 +76,7 @@ function GlaMenu() {
     >
       <Button id="gla-menu-button" size="large" variant="contained" color="secondary" title="GLA" aria-describedby={id}>
         <SvgIcon component={InfoIcon} color="primary" />
-        <Typography>GLA</Typography>
+        <Typography>MARTER</Typography>
       </Button>
 
       <Popper id={id} open={open} anchorEl={anchorEl} placement="bottom-start" transition>
@@ -86,13 +86,13 @@ function GlaMenu() {
               <Paper className="gla-menu" elevation={1}>
                 <Box component="div" className="buy-tokens">
                   <Link
-                    href={`https://pancakeswap.finance/swap?inputCurrency=${usdtAddress}&outputCurrency=${GLA_ADDRESS}`}
+                    href={`https://spookyswap.finance/swap?inputCurrency=${usdtAddress}&outputCurrency=${GLA_ADDRESS}`}
                     target="_blank"
                     rel="noreferrer"
                   >
                     <Button size="large" variant="contained" color="secondary" fullWidth>
                       <Typography align="left">
-                        Buy on Pancakeswap <SvgIcon component={ArrowUpIcon} htmlColor="#A3A3A3" />
+                        Buy on SpookySwap <SvgIcon component={ArrowUpIcon} htmlColor="#A3A3A3" />
                       </Typography>
                     </Button>
                   </Link>
